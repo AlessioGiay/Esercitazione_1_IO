@@ -7,7 +7,9 @@
 int main()
 {
 	int count = 0;
+	double Sum = 0.0;
 	double Mean = 0.0;
+	double n;
     std::ifstream input("data.txt");
     std::ofstream output("result.txt");
     
@@ -24,12 +26,13 @@ int main()
     output<<"#\tN Mean\n";
 
     std::string line;
-    double n;
+
 	while (input >> n)
 	{
         count++;
         double N = map(n);
-        Mean = (Mean * (count-1) + N)/(count);
+        Sum = Sum + N;
+        Mean = Sum/count;
         output<<count<<"\t"<<std::setprecision(16)<<std::scientific<<Mean<<std::endl;
     }
 
