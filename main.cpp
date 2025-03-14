@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <iomanip>
 #include "function.h"
 
@@ -24,8 +23,6 @@ int main()
         return 1;
     }
     output<<"#\tN Mean\n";
-
-    std::string line;
 
 	while (input >> n)
 	{
