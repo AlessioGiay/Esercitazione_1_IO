@@ -9,6 +9,7 @@ int main()
 	double Sum = 0.0;
 	double Mean = 0.0;
 	double n;
+	
     std::ifstream input("data.txt");
     std::ofstream output("result.txt");
     
@@ -32,6 +33,9 @@ int main()
         Mean = Sum/count;
         output<<count<<"\t"<<std::setprecision(16)<<std::scientific<<Mean<<std::endl;
     }
+    
+    input.close();
+    output.close();
 
     return 0;
 }
