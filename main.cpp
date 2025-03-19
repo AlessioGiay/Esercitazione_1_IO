@@ -29,7 +29,7 @@ int main()
 	{
         count++;
         double N = map(n);
-        Sum = Sum + N;
+        Sum += N;
         Mean = Sum/count;
         output<<count<<"\t"<<std::setprecision(16)<<std::scientific<<Mean<<std::endl;
     }
