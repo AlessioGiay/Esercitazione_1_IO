@@ -1,1 +1,1 @@
-double map(double);
+double map(const double &x);
